@@ -2,7 +2,10 @@ package com.strings;
 
 import java.util.LinkedHashMap;
 
-/**
+/*-
+ * input:hhello 
+ * output:e
+ * 
  * Character in java is 16 bits and was designed to store the values all the
  * unicode characters present at that time. However, the number of characters
  * increased > 2^16. To tackle this, java created a functionality that a

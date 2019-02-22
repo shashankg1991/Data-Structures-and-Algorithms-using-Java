@@ -2,7 +2,10 @@ package com.strings;
 
 import java.util.HashMap;
 
-/**
+/*-
+ * input: hello, eo
+ * output: hll
+ * 
  * If we check all the characters against every unwanted character then the
  * complexity will be O(m*n) which is O(n^2) in case both strings are same.
  * 
@@ -20,7 +23,7 @@ import java.util.HashMap;
  * concept could be missed (Refer:FirstNonRepeaterCharacter algo for the
  * character > 16 bits)
  * 
- * @author shashank2484
+ * @author shashankgupta
  *
  */
 public class RemoveCharactersFromString {
