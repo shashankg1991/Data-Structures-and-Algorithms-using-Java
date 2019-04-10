@@ -14,5 +14,10 @@ Implement Data Structures and Algorithms using Java
 3. Stack
    * Basic stack
 
-3. Queue   
+4. Queue   
    * Basic queue
+
+5. Tree   
+   * Binary tress creation
+   * Binary tree traversals using recursion
+   

@@ -2,17 +2,17 @@ package com.queue;
 
 import com.node.SinglyNode;
 
-public class Queue {
-	SinglyNode head;
-	SinglyNode tail;
+public class Queue<T> {
+	SinglyNode<T> head;
+	SinglyNode<T> tail;
 
-	Queue() {
+	public Queue() {
 		head = null;
 		tail = null;
 	}
 
-	public void enqueue(int value) {
-		SinglyNode node = SinglyNode.createNewNode(value);
+	public void enqueue(T value) {
+		SinglyNode<T> node = new SinglyNode<>(value);
 		if (head == null) {
 			head = tail = node;
 		} else {
@@ -21,8 +21,8 @@ public class Queue {
 		}
 	}
 
-	public Integer dequeue() {
-		Integer value = null;
+	public Object dequeue() {
+		Object value = null;
 		if (head != null) {
 			value = head.value;
 			head = head.next;
@@ -30,8 +30,12 @@ public class Queue {
 		return value;
 	}
 
+	public boolean isEmpty() {
+		return null == head;
+	}
+
 	public void print() {
-		SinglyNode reference = head;
+		SinglyNode<T> reference = head;
 		System.out.print("Queue:");
 		while (reference != null) {
 			System.out.print(reference.value);
@@ -46,7 +50,7 @@ public class Queue {
 	}
 
 	public static void main(String[] args) {
-		Queue testQueue = new Queue();
+		Queue<Integer> testQueue = new Queue<>();
 		testQueue.enqueue(1);
 		testQueue.print();
 		testQueue.enqueue(2);

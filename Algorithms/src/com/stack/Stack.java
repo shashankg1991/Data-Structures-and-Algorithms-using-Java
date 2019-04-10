@@ -2,15 +2,15 @@ package com.stack;
 
 import com.node.SinglyNode;
 
-public class Stack {
-	SinglyNode top;
+public class Stack<T> {
+	SinglyNode<T> top;
 
 	Stack() {
 		top = null;
 	}
 
-	public void push(int value) {
-		SinglyNode node = SinglyNode.createNewNode(value);
+	public void push(T value) {
+		SinglyNode<T> node = new SinglyNode<>(value);
 		if (null == top) {
 			top = node;
 		} else {
@@ -19,8 +19,8 @@ public class Stack {
 		}
 	}
 
-	public Integer pop() {
-		Integer value = null;
+	public Object pop() {
+		Object value = null;
 		if (null != top) {
 			value = top.value;
 			top = top.next;
@@ -28,8 +28,12 @@ public class Stack {
 		return value;
 	}
 
+	public boolean isEmpty() {
+		return null == top;
+	}
+
 	public void print() {
-		SinglyNode reference = top;
+		SinglyNode<T> reference = top;
 		System.out.println("Stack:");
 		while (reference != null) {
 			System.out.println("|" + reference.value + "|");
@@ -42,7 +46,7 @@ public class Stack {
 	}
 
 	public static void main(String[] args) {
-		Stack testStack = new Stack();
+		Stack<Integer> testStack = new Stack<>();
 		testStack.push(1);
 		testStack.print();
 		testStack.push(2);

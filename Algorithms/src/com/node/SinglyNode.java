@@ -1,24 +1,16 @@
 package com.node;
 
-public class SinglyNode {
-	public SinglyNode next;
-	public Integer value;
+public class SinglyNode<T> {
+	public SinglyNode<T> next;
+	public T value;
 
-	private SinglyNode() {
-		// no initialization from outside
+	public SinglyNode(T value) {
+		this.value = value;
+		next = null;
 	}
 
-	public static SinglyNode createNewNode(Integer value) {
-		SinglyNode node = new SinglyNode();
-		node.value = value;
-		node.next = null;
-		return node;
-	}
-
-	public static SinglyNode createNode(Integer value, SinglyNode next) {
-		SinglyNode node = new SinglyNode();
-		node.value = value;
-		node.next = next;
-		return node;
+	public SinglyNode(T value, SinglyNode<T> next) {
+		this.value = value;
+		this.next = next;
 	}
 }
