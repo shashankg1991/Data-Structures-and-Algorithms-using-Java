@@ -6,7 +6,7 @@ import com.stack.Stack;
 public class InorderTraversalteration {
 	/*-
 	 * https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
-	 * Similar logic as the tree creation using queue.
+	 * https://algorithms.tutorialhorizon.com/binary-tree-preorder-traversal-non-recursive-approach/
 	 * 
 	 * Tree created is 
 	 * 			  1
@@ -49,6 +49,9 @@ public class InorderTraversalteration {
 			 * Print the root of left node and continue doing so until a right
 			 * subtree is found. If no right subtree found print complete
 			 * printing till root.
+			 * 
+			 * The while loop can be removed and will have the same results. It
+			 * has been added for simplicity
 			 */
 			while (currentNode.right == null && !treeNodesStack.isEmpty()) {
 				currentNode = (BTreeNode<Integer>) treeNodesStack.pop();
