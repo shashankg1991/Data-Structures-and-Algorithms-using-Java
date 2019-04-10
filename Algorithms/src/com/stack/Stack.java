@@ -5,7 +5,7 @@ import com.node.SinglyNode;
 public class Stack<T> {
 	SinglyNode<T> top;
 
-	Stack() {
+	public Stack() {
 		top = null;
 	}
 
