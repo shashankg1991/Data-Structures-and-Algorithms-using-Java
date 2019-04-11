@@ -10,6 +10,7 @@ Implement Data Structures and Algorithms using Java
 2. Recursion
    * Factorial at all levels
    * Binary search
+   * Check array is sorted
 
 3. Stack
    * Basic stack
@@ -25,4 +26,5 @@ Implement Data Structures and Algorithms using Java
    * Search element using recursion and iteration
    * Find size using recursion and iteration
    * Reverse level order traversal
+   * Delete tree
    
