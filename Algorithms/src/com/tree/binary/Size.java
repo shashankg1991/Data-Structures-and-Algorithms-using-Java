@@ -6,8 +6,8 @@ import com.queue.Queue;
 public class Size {
 	public static void main(String[] args) {
 		BTreeNode<Integer> root = BinaryTree.createTestBTree();
-		System.out.println("Maximum value(Recursion): " + findSizeUsingRecursion(root));
-		System.out.println("Maximum value(Iteration): " + findSizeUsingIteration(root));
+		System.out.println("Size(Recursion): " + findSizeUsingRecursion(root));
+		System.out.println("Size(Iteration): " + findSizeUsingIteration(root));
 	}
 
 	public static Integer findSizeUsingRecursion(BTreeNode<Integer> root) {
