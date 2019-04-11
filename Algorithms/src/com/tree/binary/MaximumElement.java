@@ -31,30 +31,30 @@ public class MaximumElement {
 		}
 		return max;
 	}
-	
+
 	@SuppressWarnings("unchecked")
-	public static Integer findMaxElementUsingIteration(BTreeNode<Integer> root){
+	public static Integer findMaxElementUsingIteration(BTreeNode<Integer> root) {
 		Integer max = Integer.MIN_VALUE;
 		if (null == root) {
 			return max;
 		}
-		
-		Queue<BTreeNode<Integer>> treeNodesQueue=new Queue<>();
+
+		Queue<BTreeNode<Integer>> treeNodesQueue = new Queue<>();
 		treeNodesQueue.enqueue(root);
 		BTreeNode<Integer> current = null;
-		while(!treeNodesQueue.isEmpty()){
-			current=(BTreeNode<Integer>) treeNodesQueue.dequeue();
-			
-			//Check the value with current maximum value.
-			if(current.value>max){
-				max=current.value;
+		while (!treeNodesQueue.isEmpty()) {
+			current = (BTreeNode<Integer>) treeNodesQueue.dequeue();
+
+			// Check the value with current maximum value.
+			if (current.value > max) {
+				max = current.value;
 			}
-			
-			//Add left and right nodes to queue
-			if(null!=current.left){
+
+			// Add left and right nodes to queue
+			if (null != current.left) {
 				treeNodesQueue.enqueue(current.left);
 			}
-			if(null!=current.right){
+			if (null != current.right) {
 				treeNodesQueue.enqueue(current.right);
 			}
 		}

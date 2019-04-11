@@ -6,14 +6,11 @@ import com.queue.Queue;
 public class SearchElement {
 	public static void main(String[] args) {
 		BTreeNode<Integer> root = BinaryTree.createTestBTree();
-		System.out.println("Element found(Recursion): "
-				+ searchElementUsingRecursion(root, 4));
-		System.out.println("Element found(Iteration): "
-				+ searchElementUsingIteration(root, 4));
+		System.out.println("Element found(Recursion): " + searchElementUsingRecursion(root, 4));
+		System.out.println("Element found(Iteration): " + searchElementUsingIteration(root, 4));
 	}
 
-	public static boolean searchElementUsingRecursion(BTreeNode<Integer> root,
-			Integer value) {
+	public static boolean searchElementUsingRecursion(BTreeNode<Integer> root, Integer value) {
 
 		// Check root
 		if (null == root) {
@@ -36,8 +33,7 @@ public class SearchElement {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static boolean searchElementUsingIteration(BTreeNode<Integer> root,
-			Integer value) {
+	public static boolean searchElementUsingIteration(BTreeNode<Integer> root, Integer value) {
 		boolean isPresent = false;
 		if (null == root) {
 			return isPresent;
