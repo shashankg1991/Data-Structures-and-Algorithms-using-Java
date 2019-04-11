@@ -18,6 +18,8 @@ Implement Data Structures and Algorithms using Java
    * Basic queue
 
 5. Tree   
-   * Binary tress creation
+   * Binary tree creation
    * Binary tree traversals using recursion
+   * Binary tree traversals using iteration
+   * Maximum element using recursion and iteration
    

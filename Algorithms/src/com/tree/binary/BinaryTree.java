@@ -46,4 +46,31 @@ public class BinaryTree<T> {
 			}
 		}
 	}
+
+	/*-
+	 * Tree created is 
+	 * 			  1
+	 * 			/   \
+	 * 		   2     3
+	 * 		  /\    / \
+	 * 		4   5  6   7
+	 */
+	public static BTreeNode<Integer> createTestBTree() {
+		BinaryTree<Integer> binaryTree = new BinaryTree<>();
+		binaryTree.insert(1);
+		binaryTree.insert(2);
+		binaryTree.insert(3);
+		binaryTree.insert(4);
+		binaryTree.insert(5);
+		binaryTree.insert(6);
+		binaryTree.insert(7);
+		System.out.println("Tree:");
+		System.out.println("     1");
+		System.out.println("   /   \\");
+		System.out.println("  2     3");
+		System.out.println(" /\\    / \\");
+		System.out.println("4   5  6   7");
+		System.out.println();
+		return binaryTree.root;
+	}
 }

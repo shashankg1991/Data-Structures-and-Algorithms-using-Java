@@ -16,15 +16,7 @@ public class PostorderTraversalteration {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		BinaryTree<Integer> binaryTree = new BinaryTree<>();
-		binaryTree.insert(1);
-		binaryTree.insert(2);
-		binaryTree.insert(3);
-		binaryTree.insert(4);
-		binaryTree.insert(5);
-		binaryTree.insert(6);
-		binaryTree.insert(7);
-		BTreeNode<Integer> root = binaryTree.root;
+		BTreeNode<Integer> root = BinaryTree.createTestBTree();
 		postorderTravsere(root);
 	}
 
