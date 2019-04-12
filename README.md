@@ -28,4 +28,13 @@ Implement Data Structures and Algorithms using Java
    * Reverse level order traversal
    * Delete tree
    * Find height using recursion and iteration
+   * Find deepest node in tree
+   * Delete node
+   * Find diameter of tree
+   * Check 2 trees for equality
+   * Find full, half and leaf nodes
+   * Find maximum sum of a level
+   * Find all node to leaf paths
+   * Check path from root to leaf for sum
+   * Find sum of all elements
    
