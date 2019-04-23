@@ -10,26 +10,29 @@ public class SearchElement {
 		System.out.println("Element found(Iteration): " + searchElementUsingIteration(root, 4));
 	}
 
-	public static boolean searchElementUsingRecursion(BTreeNode<Integer> root, Integer value) {
+	public static BTreeNode<Integer> searchElementUsingRecursion(BTreeNode<Integer> root, Integer value) {
 
+		BTreeNode<Integer> searchedElement = null;
 		// Check root
 		if (null == root) {
-			return false;
+			return searchedElement;
 		}
 		if (value == root.value) {
-			return true;
+			return root;
 		}
 
 		// Search in left subtree
-		if (searchElementUsingRecursion(root.left, value)) {
-			return true;
+		searchedElement = searchElementUsingRecursion(root.left, value);
+		if (null != searchedElement) {
+			return searchedElement;
 		}
 
 		// Search in right subtree
-		if (searchElementUsingRecursion(root.right, value)) {
-			return true;
+		searchedElement = searchElementUsingRecursion(root.right, value);
+		if (null != searchedElement) {
+			return searchedElement;
 		}
-		return false;
+		return searchedElement;
 	}
 
 	@SuppressWarnings("unchecked")
